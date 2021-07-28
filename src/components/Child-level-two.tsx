@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-const ChildLevelTwo: React.FC = () => (
-  <div>ChildLevelTwo</div>
-)
+import { ThemeContext } from './ThemeProvider'
 
-export default React.memo(ChildLevelTwo);
+const ChildLevelTwo: React.FC = () => {
+  const { color, setColor } = useContext(ThemeContext)
+
+  const onClick = () => {
+    setColor('#c71a7f')
+  }
+
+  return (
+    <div>
+      <header>Child Level Two</header>
+      <p style={{ color }}>{color}</p>
+      <button onClick={onClick}>Child Level Two</button>
+    </div>
+  );
+}
+
+export default ChildLevelTwo;

@@ -1,5 +1,6 @@
 import './index.css';
 import App from './components/App';
+import ThemeProvider from './components/ThemeProvider';
 import ChildLevelOne from './components/Child-level-one';
 import ChildLevelTwo from './components/Child-level-two';
 import React from 'react';
@@ -12,11 +13,40 @@ const root = ReactDOM.createRoot(container as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <App>
-      <ChildLevelOne>
-        <ChildLevelTwo/>
-      </ChildLevelOne>
-    </App>
+    <div className="ThemeContextExampleContainer">
+      <div>
+        <h4>Context for all</h4>
+        <ThemeProvider>
+          <App>
+            <ChildLevelOne>
+              <ChildLevelTwo/>
+            </ChildLevelOne>
+          </App>
+        </ThemeProvider>
+      </div>
+
+      <div>
+        <h4>Context for ChildLevelOne, ChildLevelTwo </h4>
+        <App>
+          <ThemeProvider>
+            <ChildLevelOne>
+              <ChildLevelTwo/>
+            </ChildLevelOne>
+          </ThemeProvider>
+        </App>
+      </div>
+
+      <div>
+        <h4>Context for ChildLevelTwo </h4>
+        <App>
+          <ChildLevelOne>
+            <ThemeProvider>
+              <ChildLevelTwo/>
+            </ThemeProvider>
+          </ChildLevelOne>
+        </App>
+      </div>
+    </div>
   </React.StrictMode>
 );
 

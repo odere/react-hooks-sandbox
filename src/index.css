@@ -5,20 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  color: white;
+  padding: 2em;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ThemeContextExampleContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 1em;
+}
+
 .App {
   align-items: center;
-  background-color: #282c34;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   text-align: center;
 }
 
