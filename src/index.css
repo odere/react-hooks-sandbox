@@ -19,8 +19,8 @@ code {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
   gap: 1em;
+  margin: 3rem;
 }
 
 .App {

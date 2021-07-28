@@ -1,0 +1,49 @@
+.select-wrapper{
+    background-color: aliceblue;
+    width: 500px;
+}
+
+.select{
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    height: 20px;
+    padding: 8px;
+    position: relative;
+    color:blueviolet
+}
+
+.ul-wrapper {
+    background-color: aliceblue;
+    position: relative;
+    width: 100%;
+}
+
+ul{
+    border: .5px solid #ccc;
+    display:inline-block;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    padding: 8px;
+}
+
+li:hover {
+    background-color: whitesmoke;
+    border-right: 1px solid #ccc;
+}
+
+.show{
+    display:inline-block;
+}
+
+.hide{
+    display:none;
+}

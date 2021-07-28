@@ -6,6 +6,7 @@ import ChildLevelTwo from './components/Child-level-two';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
+import Select from './components/Select';
 
 const container = document.getElementById('root');
 
@@ -13,6 +14,10 @@ const root = ReactDOM.createRoot(container as HTMLElement);
 
 root.render(
   <React.StrictMode>
+    <div className="ThemeContextExampleContainer">
+      <Select />
+    </div>
+
     <div className="ThemeContextExampleContainer">
       <div>
         <h4>Context for all</h4>
