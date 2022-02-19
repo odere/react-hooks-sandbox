@@ -1,21 +1,19 @@
-import React from 'react';
+import React from "react";
 
 interface OptionProps {
-  option: string
-  onSelect(option: string): void
+  option: string;
+  onSelect(option: string): void;
 }
 
-const Option : React.FC<OptionProps> = (props) => {
-  const { onSelect, option } = props
+const Option: React.FC<OptionProps> = (props) => {
+  const { onSelect, option } = props;
 
   const onSelectHandler = (event: React.MouseEvent<HTMLElement>) => {
-    event.preventDefault()
-    onSelect(option)
-  }
+    event.preventDefault();
+    onSelect(option);
+  };
 
-  return (
-    <li onClick={onSelectHandler}>{option}</li>
-  )
-}
+  return <li onClick={onSelectHandler}>{option}</li>;
+};
 
-export default Option
+export default Option;

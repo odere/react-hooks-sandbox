@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import { ThemeContext } from './ThemeProvider'
+import { ThemeContext } from "./ThemeProvider";
 
 const ChildLevelTwo: React.FC = () => {
-  const { color, setColor } = useContext(ThemeContext)
+  const { color, setColor } = useContext(ThemeContext);
 
   const onClick = () => {
-    setColor('#c71a7f')
-  }
+    setColor("#c71a7f");
+  };
 
   return (
     <div>
@@ -16,6 +16,6 @@ const ChildLevelTwo: React.FC = () => {
       <button onClick={onClick}>Child Level Two</button>
     </div>
   );
-}
+};
 
 export default ChildLevelTwo;

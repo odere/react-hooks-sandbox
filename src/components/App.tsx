@@ -1,22 +1,22 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import { ThemeContext } from './ThemeProvider';
+import React, { useContext, useEffect, useRef } from "react";
+import { ThemeContext } from "./ThemeProvider";
 
 const App: React.FC = (props) => {
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null);
   const { children } = props;
-  const { color, setColor } = useContext(ThemeContext)
+  const { color, setColor } = useContext(ThemeContext);
 
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus()
+      inputRef.current.focus();
     }
-  }, [])
+  }, []);
 
   const onColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (setColor) {
-      setColor(event.target.value)
+      setColor(event.target.value);
     }
-  }
+  };
 
   return (
     <div className="App">
@@ -30,15 +30,15 @@ const App: React.FC = (props) => {
         type="text"
       />
 
-      <br/>
+      <br />
 
       <p style={{ color }}>{color}</p>
 
-      <br/>
+      <br />
 
       <div>{children}</div>
     </div>
   );
-}
+};
 
 export default App;

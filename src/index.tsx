@@ -18,7 +18,7 @@ root.render(
       <Select />
     </div>
 
-    <div className="ThemeContextExampleContainer">
+    <div className="ThemeContextExampleContainer scroll-container">
       <div>
         <h4>Context for all</h4>
         <ThemeProvider>
